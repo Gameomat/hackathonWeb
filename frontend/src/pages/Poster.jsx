@@ -41,22 +41,29 @@ useEffect(() => {
 
     
 
-  return (
-    <div className="poster-container">
-      <audio ref={audioRef} loop>
-  <source src="/music1.mpeg" type="audio/mpeg" />
-</audio>
+ return (
+<>
+  <div className="shutter-container">
+    <div className="shutter left"></div>
+    <div className="shutter right"></div>
+  </div>
 
-      <Navbar />
-      <div className="poster-wrapper">
-        <img 
-           src={posterImage} 
-          alt="FusionX Hackathon 2026 Poster"
-          className="poster-image"
-        />
-      </div>
+  <div className="poster-container">
 
-      {/* Animated Emojis */}
+    <audio ref={audioRef} loop>
+      <source src="/music.mpeg" type="audio/mpeg"/>
+    </audio>
+
+    <Navbar />
+
+    <div className="poster-wrapper">
+      <img
+        src={posterImage}
+        alt="FusionX Hackathon 2026 Poster"
+        className="poster-image"
+      />
+    </div>
+    {/* Animated Emojis */}
       {showEmojis && (
         <div className="emoji-container">
   {emojis.map(e => (
@@ -76,8 +83,10 @@ useEffect(() => {
 </div>
 
       )}
-    </div>
-  );
+
+  </div>
+</>
+);
 };
 
 export default Poster;
