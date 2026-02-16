@@ -14,7 +14,8 @@
   width: 100%;
   position: relative;
   z-index: 1;
-  animation: fadeIn 1s ease-out;
+  animation: posterReveal 2.5s ease forwards;
+  opacity: 0;
 }
 
 .poster-image {
@@ -39,7 +40,7 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 999999;
 }
 
 .floating-emoji {
@@ -49,6 +50,11 @@
   animation: floatSmooth linear forwards;
   pointer-events: none;
   will-change: transform, opacity;
+}
+@keyframes posterReveal {
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes floatSmooth {
@@ -115,5 +121,35 @@
   
   .floating-emoji {
     font-size: 32px;
+  }
+}
+.shutter-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.shutter {
+  flex: 1;
+  background: black;
+  animation: shutterOpen 2.5s ease forwards;
+}
+
+.shutter.left {
+  transform-origin: left;
+}
+
+.shutter.right {
+  transform-origin: right;
+}
+
+@keyframes shutterOpen {
+  to {
+    transform: scaleX(0);
   }
 }
