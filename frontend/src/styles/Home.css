@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap');
+
+.home-container {
+  min-height: 100vh;
+  background-image: url('https://customer-assets.emergentagent.com/job_emerging-tech-fusion/artifacts/yee09b1l_Untitled%20design.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay to ensure text readability */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(10, 22, 40, 0.85) 0%, 
+    rgba(26, 39, 68, 0.75) 50%, 
+    rgba(15, 27, 46, 0.85) 100%);
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Anniversary Badge */
+.anniversary-badge {
+  margin-bottom: 40px;
+}
+
+
+.anniversary-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 30px rgba(243, 156, 18, 0.6),
+      0 0 60px rgba(243, 156, 18, 0.4),
+      0 0 90px rgba(243, 156, 18, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(243, 156, 18, 0.8),
+      0 0 80px rgba(243, 156, 18, 0.6),
+      0 0 120px rgba(243, 156, 18, 0.4);
+  }
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* University Name */
+.university-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  letter-spacing: 8px;
+  margin: 30px 0;
+  text-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.5),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
+  line-height: 1.2;
+}
+
+/* Welcomes Text */
+.welcomes-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: #f1c40f;
+  text-align: center;
+  margin: 0px 0 0px;
+  text-shadow: 
+    0 0 30px rgba(241, 196, 15, 0.5),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 4px;
+}
+
+/* Event Description */
+.event-description {
+  text-align: center;
+  max-width: 900px;
+  margin: 40px 0;
+  background: rgba(10, 22, 40, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.event-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #3498db;
+  margin-bottom: 20px;
+  text-shadow: 
+    0 0 20px rgba(52, 152, 219, 0.5),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.event-subtitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ecf0f1;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.event-organizer {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #437bfc;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Enter Button */
+.enter-button-wrapper {
+  margin-top: 60px;
+}
+
+.enter-button {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 20px 80px;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 4px;
+  box-shadow: 
+    0 0 20px rgba(52, 152, 219, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.enter-button:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+  box-shadow: 
+    0 0 30px rgba(52, 152, 219, 0.8),
+    0 15px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+/* Fade Up Animations */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.fade-up-1 {
+  animation: fadeUp 1s ease-out 0.2s forwards;
+}
+
+.fade-up-2 {
+  animation: fadeUp 1s ease-out 0.4s forwards;
+}
+
+.fade-up-3 {
+  animation: fadeUp 1s ease-out 0.6s forwards;
+}
+
+.fade-up-4 {
+  animation: fadeUp 1s ease-out 0.8s forwards;
+}
+
+.fade-up-5 {
+  animation: fadeUp 1s ease-out 1s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  .anniversary-text {
+    font-size: 36px;
+  }
+  
+  .university-name {
+    font-size: 42px;
+    letter-spacing: 4px;
+  }
+  
+  .welcomes-text {
+    font-size: 36px;
+  }
+  
+  .event-description {
+    padding: 20px;
+  }
+  
+  .event-title {
+    font-size: 28px;
+  }
+  
+  .event-subtitle {
+    font-size: 20px;
+  }
+  
+  .event-organizer {
+    font-size: 24px;
+  }
+  
+  .enter-button {
+    font-size: 20px;
+    padding: 15px 50px;
+  }
+}
