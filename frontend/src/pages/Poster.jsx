@@ -51,7 +51,7 @@ useEffect(() => {
   <div className="poster-container">
 
     <audio ref={audioRef} loop>
-      <source src="/music.mpeg" type="audio/mpeg"/>
+      <source src="/music2.mpeg" type="audio/mpeg"/>
     </audio>
 
     <Navbar />
