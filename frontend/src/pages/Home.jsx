@@ -56,7 +56,7 @@ const Home = () => {
             className="enter-button"
             size="lg"
           >
-            VIEW POSTER
+            RELEASE POSTER
           </Button>
         </div>
       </div>
